@@ -3,11 +3,11 @@
     <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>
         <div class="card-title">
-            {{ product.price }}
+            <span class="text-primary" style="font-weight: bold; font-size: 1.4rem">{{ product.price | number_format(0, ',', ' ') }} €</span>
             {% if product.promo %}
                 <div class="text text-warning">Promo !</div>
             {% endif %}
         </div>
-        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text text-muted">{{ product.description }}</p>
     </div>
 </div>
