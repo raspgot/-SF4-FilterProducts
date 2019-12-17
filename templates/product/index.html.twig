@@ -4,8 +4,10 @@
 
 {% block body %}
     <div class="container">
-        {% for product in products %}
-            {% include 'product/_card.html.twig' with {product: product} only %}
-        {% endfor %}
+        <div class="grid">
+            {% for product in products %}
+                {% include 'product/_card.html.twig' with {product: product} only %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
